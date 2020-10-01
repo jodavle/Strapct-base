@@ -1,0 +1,11 @@
+app
+db
+**/node_modules
+**/.next
+**/logs
+*.log
+**/*.lock
+*.lock
+*.DS_Store
+Thumbs.db
+**/package-lock.json
