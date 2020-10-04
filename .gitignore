@@ -9,3 +9,5 @@ db
 *.DS_Store
 Thumbs.db
 **/package-lock.json
+**/*.css
+**/*.css.map
