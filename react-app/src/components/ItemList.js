@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import '../styles/css/index.css';
 
-class ItemList extends React.Component{
-
-    render() {
+class ItemList extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            url: this.props.url,
+            name: this.props.name,
+        };
+    }
+      static async getInitialProps({ req }) {
+        let pageProps = {};
+        return { pageProps };
+    }
+    render(){
         return (
-            <span>
-                <a href={this.props.ref}>{this.props.name}</a>
-            </span>
+            <>
+                <a className="navbar-item" href={this.state.url}>{this.state.name}</a>
+            </>
         );
     }
-}
-
+};
 export default ItemList;
